@@ -22,6 +22,7 @@ int main(){
     cout << "String : " << demostring << endl;
     //creating object of a Solution class and calling the function
     Solution object;
+    cout << "Reverse String is : " << endl;
     object.reverseWord(demostring);
     return 0;
 }
