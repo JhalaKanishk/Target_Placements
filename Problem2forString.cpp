@@ -1,20 +1,16 @@
 #include<iostream>
 using namespace std;
 //to reverse a string
-class Solution
-{
+class Solution{
+    
     public:
-    string reverseWord(string str)
-    {
-        // if the size of string is too small then we can't reverse it
-        if(str.size() == 0 || str.size() == 1)
-            return str;
-
-        //we are using recursion here Recursion : function calling itself is known as recursion
-        return reverseWord(str.substr(1))+str[0];
+    string reverseWord(string str){
+        //simply run a reverse loop!
+        for (int i = str.length() - 1; i >= 0; i--){
+            cout << str[i];
+        }
     }
 };
-
 
 
 int main(){
@@ -26,7 +22,6 @@ int main(){
     cout << "String : " << demostring << endl;
     //creating object of a Solution class and calling the function
     Solution object;
-    cout << "Reverse String : " << object.reverseWord(demostring);//passing the input string to the function
-
+    object.reverseWord(demostring);
     return 0;
 }
