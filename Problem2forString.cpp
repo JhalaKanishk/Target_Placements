@@ -5,10 +5,15 @@ class Solution{
     
     public:
     string reverseWord(string str){
-        //simply run a reverse loop!
-        for (int i = str.length() - 1; i >= 0; i--){
-            cout << str[i];
+        string new_string;//create a new string
+
+        //run a revers loop
+        for(int n = str.length()-1; n >= 0; n--){
+            //push the character at n to the new string
+            new_string.push_back(str[n]);
         }
+        //return the ans
+        return new_string;
     }
 };
 
@@ -21,8 +26,8 @@ int main(){
     cin >> demostring;//taking input
     cout << "String : " << demostring << endl;
     //creating object of a Solution class and calling the function
-    Solution object;
     cout << "Reverse String is : " << endl;
-    object.reverseWord(demostring);
+    Solution object;
+    cout << object.reverseWord(demostring) << endl;
     return 0;
 }
