@@ -46,7 +46,15 @@ class Student{
             cout << "Student ID : " << SID << endl;
             cout << "Student NAME : " << SNAME << endl;
         }
+    //use of scope resolution
+        void displayfun();
 };
+
+void Student :: displayfun(){
+    cout << "Increasing Accessibilty using (::)" << endl;
+    cout << "Age : " << 20 << endl;
+    cout << "Name : " << "Hitiksha" << endl;
+}
 
 //Globally Declared
 string name = "Hitiksha";
@@ -64,7 +72,7 @@ int main(){
         CLASS & OBJECTS
     */
     //Student is class and sobj is object
-    // Student sobj;
+    Student sobj;
 
     //Accessing Member Function
     // sobj.set();
@@ -83,6 +91,8 @@ int main(){
 
     // cout << "GLOBAL VARIABLE : " << ::name << endl;
     // cout << "LOCAL VARIABLE : " << name << endl;
+    //Accesssing an function outside the class
+    sobj.displayfun();
 
 
     /*[TOPIC : 3] 
